@@ -19,24 +19,34 @@ body {
 
 #navbar-text{
     text-align: center;
+    font-weight: 900;
 }
 .card-group{
     display: flex;
     flex-wrap: wrap;
     padding: 30px;
+
 }
 .card {
     border-radius: 8px;
     margin: 5px;
     box-shadow: 3px 6px 9px  slategrey;
-    background: whitesmoke;
+    
 }
-.card-header{
+.card-group .card-header{
     background: lightskyblue;
     font-family: 'Ubuntu', sans-serif;
+    display: flex;
 }
 .card-title{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     text-align: center;
+}
+
+@media screen and (max-width: 690px){
+    .card{
+        width: 100%;
+        display: block;
+    }
 }
