@@ -9,8 +9,8 @@ const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
 
-const Output_Dir = path.resolve(__dirName, 'output');
-const outputPath = path.join(Output_Dir, 'team.html');
+const Output_Dir = path.resolve(__dirName, 'dist');
+const outputPath = path.join(Output_Dir, 'index.html');
 
 const render = require('./lib/htmlRenderer');
 //const generatePage = require('./src/page-template');
