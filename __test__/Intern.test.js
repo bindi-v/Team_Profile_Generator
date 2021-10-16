@@ -1,5 +1,5 @@
 
-const { test } = require('@jest/globals');
+//const { test } = require('@jest/globals');
 const Intern = require('../lib/Intern');
 
 //Intern object
@@ -18,7 +18,7 @@ test("get employee's role", () => {
 });
 //get school
 test("get employee's school", () => {
-    const testValue = "UGT"
+    const testValue = "UGT";
     const intern = new Intern('Grace', 18, 'test@email.com', testValue);
 
     expect(intern.getSchool()).toBe(testValue);
