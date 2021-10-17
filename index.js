@@ -1,7 +1,8 @@
 //const writeFile = require('./src/generateHtml');
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateTeam = require('./src/generateHtml.js');
+const generateTeam = require('./src/generateHtml');
+
 //const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
@@ -9,26 +10,14 @@ const Intern = require('./lib/Intern');
 
 //const path = require('path');
 
-//const Output_Dir = path.resolve(__dirName, 'dist');
-//const outputPath = path.join(Output_Dir, 'index.html');
-
 const newTeamEmployee = [];
 
-//const generatePage = (htmlPage) => {
-//    if(!fs.existsSync(Output_Dir)){
-//        fs.mkdirSync(Output_Dir);
- //   }
-//fs.writeFile(outputPath, htmlPage, 'utf-8', (err) => {
-//        if(err) throw err;
-//        console.log("Team Profile is generated!");
-//    })
-//}
 
 const questions = async () => {
     const answers = await inquirer
     .prompt([
         {
-                     type: 'input',
+            type: 'input',
                     name: 'name',
                     message: "What is the Employee's name?",
                  }, {
@@ -115,33 +104,64 @@ await questions()
 const addEmployeeAns = await inquirer
 .prompt([
     {
-                type: 'confirm',
+                type: 'list',
                 name: 'addEmployee',
                 message: "Do you want to add more Employee information?",
+               // default: false,
+                choices: ['Add Engineer', 'Add Intern', 'Create Team']
             } 
  ])
-
-if (addEmployeeAns.addEmployee === 'Add a new Employee'){
-    return promptQuestions()
-      }
-return createTeam();
+.then((addEmployeeAns) => {
+    if(addEmployeeAns.addEmployee === 'Add Engineer'){
+    
+        return promptQuestions();
+    }else if(addEmployeeAns.addEmployee === 'Add Intern'){
+       
+       return promptQuestions();
+}else if(addEmployeeAns.addEmployee === 'Create Team'){
+    
+        const newTeam = generateTeam(newTeamEmployee);
+        return writeToFile(('./dist/generateTeam.html'), newTeam);
+    }else {
+        return writeToFile();
+    }
+})
+//if (addEmployeeAns.addEmployee === 'Add a new Employee'){
+ //   return promptQuestions();
+   //   }
+//return createTeam();
  }
 
  promptQuestions();
 
 function createTeam() {
     console.log("new employee", newTeamEmployee)
-    fs.writeFileSync("./dist/index.html", generateTeam(newTeamEmployee), "utf-8", (err) => {
-       if(err) {
-           console.log(err);
-           return " Something Wrong!";
-        }else {
-       console.log("Your Team Profile Successfully Generated!")
+ return  fs.writeFileSync("./dist/index.html", generateTeam(newTeamEmployee), (err) => {
+    if(err) {
+          console.log(err);
+          return " Something Wrong!";
+     }else {
+    console.log("Your Team Profile Successfully Generated!")
 }
-     }
-     );
+   });
  }
  
+ //const writeFile = (data) => {
+ //    return new Promise((resolve, reject) => {
+// fs.writeFile('./dist/index.html', data, err => {
+ 
+ //    if(err){
+ //        console.log(err);
+//         return;
+ //    }
+//     resolve({
+//         ok: true,
+ //        message: "Your file has been generated!"
+//     })
+// })
+//     })
+// }
+
 
 
 

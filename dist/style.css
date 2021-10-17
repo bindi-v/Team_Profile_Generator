@@ -8,40 +8,35 @@ body {
     
 }
 
-#navbar {
+.team-heading {
     background: crimson;
     color: whitesmoke;
     font-size: 50px;
-    text : center;
     display: flex;
     padding: 20px;
 }
 
-#navbar-text{
-    text-align: center;
-    font-weight: 900;
-}
-.card-group{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 30px;
-
-}
 .card {
-    border-radius: 8px;
+    border-radius: 10px;
     margin: 5px;
     box-shadow: 3px 6px 9px  slategrey;
     
 }
-.card-group .card-header{
+ .card-header{
     background: lightskyblue;
     font-family: 'Ubuntu', sans-serif;
-    display: flex;
 }
 .card-title{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     text-align: center;
+}
+.card-body{
+    background: lightyellow;
+}
+.list-grp-itm{
+    font-weight: bold;
+    color: #222;
 }
 
 @media screen and (max-width: 690px){

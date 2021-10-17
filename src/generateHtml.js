@@ -1,13 +1,13 @@
 const generateTeam = (team) => {
     const generateManager = (manager) => {
         return `
-        <div class="card employee card">
+        <div class="card">
         <div class="card-header">
         <h2 class="card-title">${manager.getName()}</h2>
         <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
         </div>
         <div class="card-body">
-        <ul class="list-"group">
+        <ul>
         <li class="list-grp-itm">ID : ${manager.getId()}</li>
         <li class="list-grp-itm">Email : <a href="#" target="_blank"> ${manager.getEmail()}</a></li>
         <li class="list-grp-itm">Office Number : ${manager.getOfficeNumber()}</li>
@@ -18,13 +18,13 @@ const generateTeam = (team) => {
 
     const generateEngineer = (engineer) => {
         return `
-        <div class="card employee-card">
+        <div class="card">
         <div class="card-header">
         <h2 class="card-title">${engineer.getName()}</h2>
         <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
         </div>
         <div class="card-body">
-        <ul class="list-group">
+        <ul>
         <li class="list-grp-itm">ID : ${engineer.getId()}</li>
         <li class="list-grp-itm">Email : <a href="#" target="_blank"> ${engineer.getEmail()}</a></li>
         <li class="list-grp-itm">GitHub :  <a href="#" target="_blank"> ${engineer.getGithub()}</a></li>
@@ -35,13 +35,13 @@ const generateTeam = (team) => {
 
     const generateIntern = (intern) => {
         return `
-        <div class="card employee-card">
+        <div class="card">
         <div class="card-header">
         <h2 class="card-title">${intern.getName()}</h2>
         <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}</h3>
         </div>
         <div class="card-body">
-        <ul class="list-group">
+        <ul>
         <li class="list-grp-itm">ID : ${intern.getId()}</li>
         <li class="list-grp-itm">Email : <a href="#" target="_blank"> ${intern.getEmail()}</a></li>
         <li class="list-grp-itm">School : ${intern.getSchool()}</li>
@@ -108,26 +108,3 @@ module.exports = (team) => {
     </html>
     `;
 };
-
-
-
-
-
-const fs = require('fs');
-
-const writeFile = (data) => {
-    return new Promise((resolve, reject) => {
-fs.writeFile('./dist/index.html', data, err => {
-
-    if(err){
-        console.log(err);
-        return;
-    }
-    resolve({
-        ok: true,
-        message: "Your file has been generated!"
-    })
-})
-    })
-}
-module.exports = writeFile;
