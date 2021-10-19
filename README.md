@@ -6,6 +6,17 @@
 
  This application is generating a team profile based on user's inputs.
 
+## Task
+
+Our task is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Testing is key to making code maintainable, so I’ll also write a unit test for every part of your code and ensure that it passes each test.
+
+## User Story
+
+```md
+AS A manager
+I WANT to generate a webpage that displays my team's basic info
+SO THAT I have quick access to their emails and GitHub profiles
+
 ## Table Of Contents
 
 - [Installation](#installation)
@@ -29,11 +40,11 @@ This project is licensed under
  MIT
 For more about the license, check this link
 
-![License](https://opensource.org/licenses/MIT)
+[License](https://opensource.org/licenses/MIT)
 
 ## Contribution
 
-Trilogy Education provides direction 
+Trilogy Education and Coding Bootcamp provides direction 
 
 ## Contact
 
@@ -44,4 +55,7 @@ Trilogy Education provides direction
 
 If you have any questions, please reach out to this email,
  bindi.vaghela@gmail.com
+
+ ## Walkthrough Video:
+
 

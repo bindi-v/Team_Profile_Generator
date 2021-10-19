@@ -9,7 +9,6 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const { resolve } = require('path');
 
-//const path = require('path');
 
 const newTeamEmployee = [];
 
@@ -108,7 +107,7 @@ const addEmployeeAns = await inquirer
                 type: 'list',
                 name: 'addEmployee',
                 message: "Do you want to add more Employee information?",
-               // default: false,
+            
                 choices: ['Add Engineer', 'Add Intern', 'Create Team']
             } 
  ])
@@ -122,10 +121,9 @@ const addEmployeeAns = await inquirer
        return promptQuestions();
 }else if(addEmployeeAns.addEmployee === 'Create Team'){
     
-        //const newTeam = generateTeam(newTeamEmployee);
-//return createTeam(('./dist/generateTeam.html'), newTeam);
-   // }else {
+        console.log("Your Team Profile Successfully Generated!");
         return createTeam(newTeamEmployee);
+        
     }
 })
 //if (addEmployeeAns.addEmployee === 'Add a new Employee'){
@@ -150,22 +148,7 @@ function createTeam(newTeamEmployee) {
    });
  }
  
- //const writeFile = (data) => {
- //    return new Promise((resolve, reject) => {
-// fs.writeFile('./dist/index.html', data, err => {
  
- //    if(err){
- //        console.log(err);
-//         return;
- //    }
-//     resolve({
-//         ok: true,
- //        message: "Your file has been generated!"
-//     })
-// })
-//     })
-// }
-
 
 
 
