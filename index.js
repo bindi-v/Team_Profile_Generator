@@ -7,6 +7,7 @@ const generateTeam = require('./src/generateHtml');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const { resolve } = require('path');
 
 //const path = require('path');
 
@@ -74,7 +75,7 @@ const questions = async () => {
         );
         newTeamEmployee.push(newEngineer);
 
-//         console.log(newTeamEmployee);
+      console.log(newTeamEmployee);
 
      }else if(answers.role === 'Intern'){
          const internAns = await inquirer
@@ -93,7 +94,7 @@ const questions = async () => {
         );
 
        newTeamEmployee.push(newIntern);
-       //         console.log(newTeamEmployee);
+                console.log(newTeamEmployee);
     }
  };
 
@@ -112,6 +113,7 @@ const addEmployeeAns = await inquirer
             } 
  ])
 .then((addEmployeeAns) => {
+    console.log(addEmployeeAns, 'adding Employee');
     if(addEmployeeAns.addEmployee === 'Add Engineer'){
     
         return promptQuestions();
@@ -120,10 +122,10 @@ const addEmployeeAns = await inquirer
        return promptQuestions();
 }else if(addEmployeeAns.addEmployee === 'Create Team'){
     
-        const newTeam = generateTeam(newTeamEmployee);
-        return writeToFile(('./dist/generateTeam.html'), newTeam);
-    }else {
-        return writeToFile();
+        //const newTeam = generateTeam(newTeamEmployee);
+//return createTeam(('./dist/generateTeam.html'), newTeam);
+   // }else {
+        return createTeam(newTeamEmployee);
     }
 })
 //if (addEmployeeAns.addEmployee === 'Add a new Employee'){
@@ -134,15 +136,17 @@ const addEmployeeAns = await inquirer
 
  promptQuestions();
 
-function createTeam() {
-    console.log("new employee", newTeamEmployee)
- return  fs.writeFileSync("./dist/index.html", generateTeam(newTeamEmployee), (err) => {
+function createTeam(newTeamEmployee) {
+    console.log("new-employee", newTeamEmployee)
+ return  fs.writeFileSync("./dist/index.html", generateTeam(newTeamEmployee), 'utf8', (err) => {
     if(err) {
           console.log(err);
           return " Something Wrong!";
-     }else {
-    console.log("Your Team Profile Successfully Generated!")
-}
+     } else {
+  
+    console.log("Your Team Profile Successfully Generated!");
+     }
+
    });
  }
  

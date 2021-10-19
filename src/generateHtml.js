@@ -3,8 +3,8 @@ const generateTeam = (team) => {
         return `
         <div class="card">
         <div class="card-header">
-        <h2 class="card-title">${manager.getName()}</h2>
-        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
+        <h2 class="card-title"> ${manager.getName()}</h2>
+        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i> ${manager.getRole()}</h3>
         </div>
         <div class="card-body">
         <ul>
@@ -20,8 +20,8 @@ const generateTeam = (team) => {
         return `
         <div class="card">
         <div class="card-header">
-        <h2 class="card-title">${engineer.getName()}</h2>
-        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
+        <h2 class="card-title"> ${engineer.getName()}</h2>
+        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i> ${engineer.getRole()}</h3>
         </div>
         <div class="card-body">
         <ul>
@@ -37,8 +37,8 @@ const generateTeam = (team) => {
         return `
         <div class="card">
         <div class="card-header">
-        <h2 class="card-title">${intern.getName()}</h2>
-        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}</h3>
+        <h2 class="card-title"> ${intern.getName()}</h2>
+        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i> ${intern.getRole()}</h3>
         </div>
         <div class="card-body">
         <ul>
@@ -88,7 +88,8 @@ module.exports = (team) => {
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" >
 <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-    </head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
     <body>
         <div class="container-fluid">
             <div class="row">
