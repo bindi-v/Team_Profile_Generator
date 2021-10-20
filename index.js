@@ -9,9 +9,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const { resolve } = require('path');
 
-
 const newTeamEmployee = [];
-
 
 const questions = async () => {
     const answers = await inquirer
@@ -36,7 +34,6 @@ const questions = async () => {
                     choices: ['Manager', 'Engineer', 'Intern'],
                 }, 
     ])
-
 
     if (answers.role === 'Manager') {
         const managerAns = await inquirer
@@ -97,7 +94,6 @@ const questions = async () => {
     }
  };
 
- 
 async function promptQuestions() {
 await questions()
 

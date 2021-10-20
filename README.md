@@ -16,6 +16,7 @@ Our task is to build a Node.js command-line application that takes in informatio
 AS A manager
 I WANT to generate a webpage that displays my team's basic info
 SO THAT I have quick access to their emails and GitHub profiles
+```
 
 ## Table Of Contents
 
@@ -57,5 +58,8 @@ If you have any questions, please reach out to this email,
  bindi.vaghela@gmail.com
 
  ## Walkthrough Video:
+
+ * [Team Profile Generator Video](https://watch.screencastify.com/v/rdAsV8NFMwW4JKa77oKm)
+ * [If above links not work Try this link](https://drive.google.com/file/d/1GdD-FjJOxBdljRLI2CjIP3gduI_FTkw7/view)
 
 
