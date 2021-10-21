@@ -60,6 +60,10 @@ If you have any questions, please reach out to this email,
  ## Walkthrough Video:
 
  * [Team Profile Generator Video](https://watch.screencastify.com/v/rdAsV8NFMwW4JKa77oKm)
- * [If above links not work Try this link](https://drive.google.com/file/d/1GdD-FjJOxBdljRLI2CjIP3gduI_FTkw7/view)
+ * [If above link not work, Try this link](https://drive.google.com/file/d/1GdD-FjJOxBdljRLI2CjIP3gduI_FTkw7/view)
+
+ ### The URL of the GitHub repository
+
+   [Team Profile Generator](https://github.com/bindi-v/Team_Profile_Generator)
 
 
