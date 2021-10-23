@@ -52,7 +52,7 @@ The following image shows a mock-up of the generated HTML’s appearance and fun
 - [Contribution](#contribution)
 - [Contact](#contact)
 - [Questions](#Questions)
-- [Walkthrough_Video](#Walkthrough_Video:)
+- [WalkthroughVDO](#Walkthrough_Video:)
     
 ## Installation 
 
@@ -92,7 +92,7 @@ Trilogy Education and Coding Boot camp provides direction
 
 If you have any questions, please reach out to my Github.
 
- ## Walk through Video:
+ ## Walkthrough_Video:
 
  * [Team Profile Generator Video](https://watch.screencastify.com/v/rdAsV8NFMwW4JKa77oKm)
 
