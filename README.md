@@ -52,7 +52,7 @@ The following image shows a mock-up of the generated HTML’s appearance and fun
 - [Contribution](#contribution)
 - [Contact](#contact)
 - [Questions](#Questions)
-- [WalkthroughVDO](#Walkthrough_Video:)
+- [Walkthrough_Video:](#Walkthrough_Video:)
     
 ## Installation 
 
