@@ -52,12 +52,12 @@ The following image shows a mock-up of the generated HTML’s appearance and fun
 - [Contribution](#contribution)
 - [Contact](#contact)
 - [Questions](#Questions)
-- [Walkthrough_Video](#Walk through Video:)
+- [Walkthrough_Video](#Walkthrough_Video:)
     
 ## Installation 
 
 The following necessary dependencies must be installed to run the application.
-  This application requires an inquirer, file system and jest.
+  This application requires node.js, an inquirer, file system and jest.
 
 ## Usage
 
@@ -102,6 +102,6 @@ If you have any questions, please reach out to my Github.
 
  * [Team Profile Generator](https://github.com/bindi-v/Team_Profile_Generator)
 
- ###### Thank You for visiting my Github.
+ ####        Thank You for visiting my Github.
 
 
